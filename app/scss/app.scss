@@ -1,0 +1,146 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+
+.row {
+	padding: 0 2.1875rem;
+}
+/*typography start*/
+@mixin separator($color, $bottom) {
+	content: " ";
+	position: absolute;
+	width: 88px;
+	height: 2px;
+	background: $color;
+	bottom: $bottom;
+	left: calc(50% - 44px);
+}
+
+h2 {
+	padding: 5rem 0 6.25rem;
+	position: relative;
+	text-shadow: 1px 1px 4px black;
+	text-transform: uppercase;
+	margin: 0;
+	&:after {
+		@include separator(#fff, 53px);
+	}
+	&.rp-title_black {
+		color:black;
+		&:after {
+			@include separator(#111, 53px);
+		}
+	}
+}
+/*typography end*/
+.rp-header {
+	height: 100vh;
+	padding: 50px 0;
+	color: white;
+	position: relative;
+}
+
+.rp-baner {
+	max-width: 37.5rem;
+	margin: auto;
+	background-color: rgba(0,0,0, .65);
+	p {
+		padding-bottom: 4rem;
+	}
+}
+.rp-scroll {
+	background-image: url('../img/scroll.png');
+	position: absolute;
+	bottom: 2.5rem;
+	left: calc(50% - 46px);
+	height: 92px;
+	width: 92px;
+	transition: all .4s;
+	transform: scale(0.9);
+
+	// @-webkit-keyframes pulse {
+	// 	0% { -webkit-box-shadow: 0 0 12px rgba(51, 204, 255, 0.2); border-radius: 50%; }
+	// 	50% {
+	// 		-webkit-box-shadow: 0 0 12px rgba(51, 204, 255, 0.9); border-radius: 50%;}
+	// 		100% { -webkit-box-shadow: 0 0 12px rgba(51, 204, 255, 0.2); border-radius: 50%; } }
+	&:hover {
+	// 	-webkit-animation: pulse 1.5s infinite ease-in-out;
+	transform: scale(1) translateY(10px);
+}
+}
+/* Menu */
+.top-bar {
+	padding-bottom: 3rem;
+	.rp-logo {
+		background-color: #FFF;
+		font-weight: 600;
+		padding: 10px;
+		border-radius: 20px;
+	}
+	ul {
+		li {
+			a {
+				color:#fff;
+				text-transform: uppercase;
+				transition:all .5s;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}
+
+/* sevices */
+.rp-services-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	// align-content: space-between;
+	align-items: baseline;
+	margin-bottom: 6rem;
+}
+.rp-services-item {
+	flex-basis: 30%;
+}
+
+.test {
+	color:red;
+}

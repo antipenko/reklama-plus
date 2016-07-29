@@ -1,0 +1,23 @@
+{
+  "name": "reklama-plus",
+  "version": "1.0.0",
+  "description": "lp for reclma-plus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antipenko/reklama-plus.git"
+  },
+  "author": "antipenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antipenko/reklama-plus/issues"
+  },
+  "homepage": "https://github.com/antipenko/reklama-plus#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
