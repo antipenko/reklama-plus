@@ -4496,6 +4496,7 @@ table.hover tr:nth-of-type(even):hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .rp-portfolio-example .rp-work {
@@ -4589,11 +4590,84 @@ table.hover tr:nth-of-type(even):hover {
   margin-top: 2rem;
   border: 2px solid white;
   transition: all .7s;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  color: white;
 }
 
 .rp-footer [type='submit']:hover {
   background: white;
   color: black;
+}
+
+@media screen and (max-width: 321px) {
+  .rp-body {
+    overflow: hidden;
+  }
+  .row {
+    padding: 0 1.1875rem;
+  }
+  .top-bar {
+    padding-bottom: 2rem;
+  }
+  .rp-scroll {
+    bottom: 0.5rem;
+    background-size: cover;
+    height: 72px;
+    width: 72px;
+    left: calc(50% - 36px);
+  }
+  .rp-title_black, .rp-title {
+    font-family: 'Raleway', Raleway, Helvetica;
+    padding: 2rem 0 3.25rem;
+    position: relative;
+    text-shadow: 1px 1px 4px black;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+  }
+  .rp-title_black:after, .rp-title:after {
+    content: " ";
+    position: absolute;
+    width: 88px;
+    height: 2px;
+    background: #fff;
+    bottom: 53px;
+    left: calc(50% - 44px);
+  }
+  .rp-title_black_black, .rp-title_black {
+    color: black;
+  }
+  .rp-title_black_black:after, .rp-title_black:after {
+    content: " ";
+    position: absolute;
+    width: 88px;
+    height: 2px;
+    background: #111;
+    bottom: 53px;
+    left: calc(50% - 44px);
+  }
+  .rp-header {
+    padding: 30px 0;
+  }
+  .rp-header .menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  .rp-services-list {
+    margin-bottom: 3rem;
+  }
+  .rp-services-item, .rp-work {
+    flex-basis: 100%;
+    padding-bottom: 1rem;
+  }
+  .rp-about img {
+    display: none;
+  }
+  .rp-footer a {
+    padding: 0 15px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
