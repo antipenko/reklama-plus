@@ -4601,6 +4601,23 @@ table.hover tr:nth-of-type(even):hover {
   color: black;
 }
 
+@media screen and (max-width: 920px) {
+  .rp-about {
+    padding: 6rem 0 7.1875rem;
+  }
+  .rp-about p {
+    max-width: 30rem;
+  }
+  .rp-about img {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rp-about img {
+    display: none;
+  }
+}
 @media screen and (max-width: 421px) {
   .rp-body {
     overflow: hidden;
