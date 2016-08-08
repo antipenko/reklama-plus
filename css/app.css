@@ -4617,6 +4617,10 @@ table.hover tr:nth-of-type(even):hover {
   .rp-about img {
     display: none;
   }
+   .rp-services-item, .rp-work {
+    flex-basis: 100%;
+    padding-bottom: 1rem;
+  }
 }
 @media screen and (max-width: 421px) {
   .rp-body {
@@ -4675,10 +4679,7 @@ table.hover tr:nth-of-type(even):hover {
   .rp-services-list {
     margin-bottom: 3rem;
   }
-  .rp-services-item, .rp-work {
-    flex-basis: 100%;
-    padding-bottom: 1rem;
-  }
+
   .rp-about img {
     display: none;
   }
