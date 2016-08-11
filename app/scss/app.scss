@@ -39,6 +39,9 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 
+body {
+	overflow-x: hidden;
+}
 .row {
 	padding: 0 2.1875rem;
 }
@@ -131,6 +134,22 @@
 	}
 }
 
+
+@keyframes bit {
+	0% {
+		transform: translate(0);
+	}
+	45% {
+		transform: translate(-60px);
+	}
+	75% {
+		transform: translate(40px);
+	}
+	100% {
+		transform: translate(0);
+	}
+}
+
 /* sevices */
 .rp-services-list {
 	display: flex;
@@ -139,6 +158,11 @@
 	// align-content: space-between;
 	align-items: baseline;
 	margin-bottom: 6rem;
+	//transform: translate(-800px, -30px);
+	&_animate {
+		animation-name: bit;
+		animation-duration: 1s;
+	}
 }
 .rp-services-item {
 	flex-basis: 30%;
@@ -171,15 +195,37 @@
 
 .rp-portfolio {
 	padding: 2rem 0 5rem;
+	.button {
+		padding: 1rem 2rem;
+		margin-top: 2rem;
+		border: 2px solid black;
+		transition: all .7s;
+		text-transform: uppercase;
+		font-style: normal;
+		font-weight: bold;
+		color: black;
+		background-color: transparent;
+		&:hover {
+			color: white;
+			background-color: black;
+		}
+	}
 	&-example {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		padding-bottom: 20px;
+		transform: translateX(1000px);
+		&_animate {
+			transform: translateX(0);
+			transition: transform ease-in .4s;
+		}
 		.rp-work{
 			width: 30%;
 			position: relative;
 			overflow: hidden;
-		&:before {
+
+			&:before {
 				/* opacity: 1; */
 				visibility: hidden;
 				position: absolute;
@@ -262,6 +308,10 @@
 		margin-top: 2rem;
 		border:2px solid white;
 		transition: all .7s;
+		text-transform: uppercase;
+		font-style: normal;
+		font-weight: bold;
+		color:white;
 		&:hover {
 			background: white;
 			color:black;
@@ -269,3 +319,154 @@
 	}
 }
 
+@media screen and (max-width: 321px) {
+	.rp-body {
+		overflow: hidden;
+	}
+	.row {
+		padding: 0 1.1875rem;
+	}
+	.top-bar {
+		padding-bottom: 2rem;
+	}
+	.rp-scroll {
+		bottom: 0.5rem;
+		background-size: cover;
+		height: 72px;
+		width: 72px;
+		left: calc(50% - 36px);
+	}
+	.rp-title_black, .rp-title {
+		font-family: 'Raleway', Raleway, Helvetica;
+		padding: 2rem 0 3.25rem;
+		position: relative;
+		text-shadow: 1px 1px 4px black;
+		text-transform: uppercase;
+		margin: 0;
+		color:white;
+		&:after {
+			@include separator(#fff, 53px);
+		}
+		&_black {
+
+			color:black;
+			&:after {
+				@include separator(#111, 53px);
+			}
+		}
+	}
+	.rp-header {
+		padding: 30px 0;
+		.menu {
+			background-color: rgba(0,0,0,.5);
+			border-radius: 10px;
+		}
+	}
+	.rp-services-list {
+		margin-bottom: 3rem;
+	}
+	.rp-services-item, .rp-work {
+		flex-basis: 100%;
+		padding-bottom: 1rem;
+	}
+
+	.rp-about {
+		img {
+			display: none;
+		}
+	}
+
+	.rp-footer a {
+		padding: 0 15px;
+	}
+}
+
+@media screen and (max-width: 920px) {
+  .rp-about {
+    padding: 6rem 0 7.1875rem;
+  }
+  .rp-about p {
+    max-width: 30rem;
+  }
+  .rp-about img {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rp-about img {
+    display: none;
+  }
+   .rp-services-item, .rp-work {
+    flex-basis: 100%;
+    padding-bottom: 1rem;
+  }
+  .rp-portfolio-example{
+  transform:translateX(0);
+  }
+}
+@media screen and (max-width: 421px) {
+  .rp-body {
+    overflow: hidden;
+  }
+  .row {
+    padding: 0 1.1875rem;
+  }
+  .top-bar {
+    padding-bottom: 2rem;
+  }
+  .rp-scroll {
+    bottom: 0.5rem;
+    background-size: cover;
+    height: 72px;
+    width: 72px;
+    left: calc(50% - 36px);
+  }
+  .rp-title_black, .rp-title {
+    font-family: 'Raleway', Raleway, Helvetica;
+    padding: 2rem 0 3.25rem;
+    position: relative;
+    text-shadow: 1px 1px 4px black;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+  }
+  .rp-title_black:after, .rp-title:after {
+    content: " ";
+    position: absolute;
+    width: 88px;
+    height: 2px;
+    background: #fff;
+    bottom: 53px;
+    left: calc(50% - 44px);
+  }
+  .rp-title_black_black, .rp-title_black {
+    color: black;
+  }
+  .rp-title_black_black:after, .rp-title_black:after {
+    content: " ";
+    position: absolute;
+    width: 88px;
+    height: 2px;
+    background: #111;
+    bottom: 53px;
+    left: calc(50% - 44px);
+  }
+  .rp-header {
+    padding: 30px 0;
+  }
+  .rp-header .menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  .rp-services-list {
+    margin-bottom: 3rem;
+  }
+
+  .rp-about img {
+    display: none;
+  }
+  .rp-footer a {
+    padding: 0 15px;
+  }
+}

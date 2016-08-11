@@ -51,7 +51,7 @@
 			<div class="row">
 				<div class="columns">
 					<h2 class="rp-title rp-title_black">наши услуги</h2>
-					<div class="rp-services-list">
+					<div class="rp-services-list mov-left">
 						<div class="rp-services-item">
 							<img src="img/phone.svg">
 							<h3>дизайн полиграфии</h3>
@@ -83,7 +83,7 @@
 		<section class="rp-portfolio text-center">
 			<div class="row">
 				<h2 class="rp-title rp-title_black">Наши работы</h2>
-				<div class="rp-portfolio-example">
+				<div class="rp-portfolio-example mov-right" >
 					<div class="rp-work">
 						<a href="#">
 							<img src="img/img1.jpg" alt="">
@@ -152,6 +152,7 @@
 						</a>
 					</div>
 				</div>
+				<a href="#" class="button">Узнать больше</a>
 			</div>
 		</section>
 	</main>
@@ -231,6 +232,8 @@
 				</a>
 
 			</div>
+
+			<p id="showScroll" style="position: fixed; left: 0; top: 0;"></p>
 			<div class="rp-form">
 				<form action="" method="post" name='contacts'>
 					<div class="rp-form__data">
@@ -241,7 +244,7 @@
 							<input type="email" placeholder="email" required>
 						</div>
 						<div class="columns">
-							<textarea placeholder="Messege"> </textarea>
+							<textarea id="message-id" name="message" required="" placeholder="Message"></textarea>
 							<input type="submit" name="" value="Отправить">
 						</div>
 					</div>

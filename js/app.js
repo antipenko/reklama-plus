@@ -20,3 +20,24 @@ $(document).ready(function(){
 
 });
 
+// window.onscroll = function() {
+// 	var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+// 	document.getElementById('showScroll').innerHTML = scrolled + 'px';
+// };
+
+$(window).scroll(function(){
+	$('.mov-left').each(function(){
+		var imagePos = $(this).offset().top;
+		var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+350){
+			$(this).addClass('rp-services-list_animate');
+		}
+	});
+	$('.mov-right').each(function(){
+		var imagePos = $(this).offset().top;
+		var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+400){
+			$(this).addClass('rp-portfolio-example_animate');
+		}
+	});
+});
