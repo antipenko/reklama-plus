@@ -17,10 +17,17 @@ $(document).ready(function(){
 	$("#responsive-menu").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
-			top = $(id).offset().top;
+		top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
 
+	$('section').click( function(event){
+		if ($("body").hasClass("rp-body")) {
+			$("body").toggleClass("rp-body");
+			$("#responsive-menu").toggle();
+			event.stopPropagation();
+		}
+	});
 });
 
 // window.onscroll = function() {
